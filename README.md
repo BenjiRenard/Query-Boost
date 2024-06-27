@@ -19,7 +19,7 @@ Query-Boost utilise l'API GPT pour générer des requêtes SQL cohérentes et le
 1. Clonez ce dépôt :
 
     ```bash
-    git clone https://github.com/votre_nom_d_utilisateur/Query-Boost.git
+    git clone https://github.com/BenjiRenard/Query-Boost.git
     cd Query-Boost
     ```
 
