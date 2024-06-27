@@ -44,7 +44,7 @@ Query-Boost utilise l'API GPT pour générer des requêtes SQL cohérentes et le
 1. Lancez le script principal :
 
     ```bash
-    python main.py
+    Query-Boost.py
     ```
 
 2. Entrez la description de la requête SQL souhaitée lorsqu'elle est demandée.
