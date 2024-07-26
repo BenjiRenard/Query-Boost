@@ -28,6 +28,7 @@ def create_connection():
         print(f"Erreur de connexion à MySQL: {e}")
         return None
 
+
 def generate_sql_query(prompt):
     try:
         response = openai.Completion.create(
