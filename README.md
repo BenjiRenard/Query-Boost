@@ -1,68 +1,63 @@
 # Query-Boost
 
-Query-Boost utilise l'API GPT pour générer des requêtes SQL cohérentes et les exécuter sur une base de données MySQL.
+Query-Boost est un outil puissant qui permet de générer et d'exécuter des requêtes SQL à partir de descriptions en langage naturel. En utilisant l'API GPT d'OpenAI, Query-Boost simplifie l'interaction avec les bases de données MySQL, rendant SQL accessible à tous.
+
+## Objectif du Projet
+
+L'objectif principal de Query-Boost est de rendre SQL accessible à tous, même à ceux qui n'ont pas forcément de connaissances approfondies en requêtage.
 
 ## Fonctionnalités
 
-- Connexion sécurisée à la base de données MySQL.
-- Génération de requêtes SQL à partir de descriptions en langage naturel.
-- Exécution et validation des requêtes SQL générées.
+- **Génération Automatique de Requêtes SQL** : Décrivez ce que vous souhaitez faire en langage naturel et Query-Boost se charge du reste.
+- **Connexion Sécurisée à MySQL** : Connectez-vous facilement et en toute sécurité à votre base de données.
+- **Exécution et Validation des Requêtes** : Query-Boost exécute les requêtes générées et vérifie leur succès.
+- **Visualisation des Données Avant et Après** : Affichez les données de la table avant et après l'exécution de la requête pour une meilleure transparence.
 
 ## Prérequis
 
 - Python 3.x
-- MySQL Server
-- Clé API OpenAI
+- [OpenAI Python Client Library](https://beta.openai.com/docs/libraries)
+- [mysql-connector-python](https://pypi.org/project/mysql-connector-python/)
+- [python-dotenv](https://pypi.org/project/python-dotenv/)
+- [pandas](https://pypi.org/project/pandas/)
+- [tkinter](https://docs.python.org/3/library/tkinter.html)
 
 ## Installation
 
-1. Clonez ce dépôt :
-
+1. Clonez le dépôt GitHub :
     ```bash
     git clone https://github.com/BenjiRenard/Query-Boost.git
     cd Query-Boost
     ```
 
-2. Créez un fichier `.env` dans le répertoire du projet et ajoutez vos configurations :
-
-    ```env
-    OPENAI_API_KEY=your_openai_api_key
-    MYSQL_USER=your_mysql_username
-    MYSQL_PASSWORD=your_mysql_password
-    MYSQL_HOST=your_mysql_host
-    MYSQL_DATABASE=your_mysql_database
+2. Installez les dépendances :
+    ```bash
+    pip install openai mysql-connector-python python-dotenv pandas
     ```
 
-3. Installez les dépendances :
-
+3. Configurez votre clé API OpenAI dans un fichier `.env` (optionnel mais recommandé) :
     ```bash
-    pip install -r requirements.txt
+    echo "OPENAI_API_KEY=your_openai_api_key" > .env
     ```
 
 ## Utilisation
 
-1. Lancez le script principal :
-
+1. Exécutez le script Python :
     ```bash
-    Query-Boost.py
+    python main.py
     ```
 
-2. Entrez la description de la requête SQL souhaitée lorsqu'elle est demandée.
+2. Entrez les informations de connexion MySQL via l'interface utilisateur.
+
+3. Décrivez la requête SQL en langage naturel et cliquez sur "Générer et Exécuter".
+
+4. Visualisez les données de la table avant et après l'exécution de la requête dans l'interface.
 
 ## Exemple
 
 ```plaintext
 Veuillez décrire la requête SQL que vous souhaitez effectuer :
-Récupérer les 10 premières lignes de la table utilisateurs.
+Récupérez les 10 premières lignes de la table utilisateurs.
 
 Requête SQL générée : SELECT * FROM users LIMIT 10;
-Requête exécutée avec succès
-
----------------------------------------------------------------------------------------------------------
-Vérification
-
-Pour vérifier que tout fonctionne correctement, suivez ces étapes :
-
-1. Installez les dépendances nécessaires avec `pip install mysql-connector-python openai python-dotenv`.
-2. Assurez-vous que le fichier `.env` est correctement configuré.
-3. Exécutez le script `main.py` et entrez une description de la requête SQL lorsque vous y êtes invité.
+Requête exécutée avec succès.
