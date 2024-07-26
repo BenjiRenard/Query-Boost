@@ -6,13 +6,13 @@ from dotenv import load_dotenv
 import os
 import pandas as pd
 
-# Charger les variables d'environnement depuis un fichier .env si disponible
+# Charge les variables d'environnement depuis un fichier .env (si disponible)
 load_dotenv()
 
-# Configuration OpenAI avec possibilité de définir directement la clé API
+# Configure OpenAI avec possibilité de définir directement la clé API
 openai.api_key = os.getenv('OPENAI_API_KEY', 'votre_cle_api_openai_ici')
 
-# Fonction pour créer la connexion MySQL
+# Connexion MySQL
 def create_connection(user, password, host, database):
     try:
         connection = mysql.connector.connect(
@@ -30,7 +30,7 @@ def create_connection(user, password, host, database):
         messagebox.showerror("Erreur", f"Erreur de connexion à MySQL: {e}")
         return None
 
-# Fonction pour générer la requête SQL à partir du prompt
+# Génère la requête SQL à partir du prompt
 def generate_sql_query(prompt):
     try:
         response = openai.Completion.create(
@@ -44,7 +44,7 @@ def generate_sql_query(prompt):
         messagebox.showerror("Erreur", f"Erreur lors de la génération de la requête SQL: {e}")
         return None
 
-# Fonction pour exécuter la requête
+# Exécute la requête
 def execute_query():
     user = user_entry.get()
     password = password_entry.get()
@@ -59,7 +59,7 @@ def execute_query():
         if connection:
             cursor = connection.cursor()
             try:
-                # Visualiser la table avant l'exécution de la requête
+                # Visualise la table avant l'exécution de la requête
                 cursor.execute("SELECT * FROM table_name LIMIT 10")
                 before_results = cursor.fetchall()
                 display_table(before_tree, before_results)
@@ -67,7 +67,7 @@ def execute_query():
                 cursor.execute(sql_query)
                 connection.commit()
 
-                # Visualiser la table après l'exécution de la requête
+                # Visualise la table après l'exécution de la requête
                 cursor.execute("SELECT * FROM table_name LIMIT 10")
                 after_results = cursor.fetchall()
                 display_table(after_tree, after_results)
@@ -77,7 +77,7 @@ def execute_query():
                 messagebox.showerror("Erreur", f"Erreur lors de l'exécution de la requête: {e}")
             connection.close()
 
-# Fonction pour afficher les résultats dans un Treeview
+# Affiche les résultats dans un Treeview
 def display_table(tree, data):
     # Supprimer les anciennes données
     for i in tree.get_children():
