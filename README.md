@@ -1,7 +1,6 @@
 
 # Query-Boost
 
-![Query-Boost Logo](https://via.placeholder.com/150)
 
 **Query-Boost** est une solution innovante permettant de rendre l'utilisation de SQL plus accessible grâce à l'intelligence artificielle. L'outil génère des requêtes SQL à partir de descriptions en langage naturel et les exécute sur des bases de données MySQL. Il s'adresse aussi bien aux développeurs novices qu'aux professionnels cherchant à automatiser leurs requêtes.
 
