@@ -5,7 +5,7 @@
 
 **Query-Boost** est une solution innovante permettant de rendre l'utilisation de SQL plus accessible grâce à l'intelligence artificielle. L'outil génère des requêtes SQL à partir de descriptions en langage naturel et les exécute sur des bases de données MySQL. Il s'adresse aussi bien aux développeurs novices qu'aux professionnels cherchant à automatiser leurs requêtes.
 
-## ?? Fonctionnalités
+## Fonctionnalités
 
 - **Génération Automatique de Requêtes SQL** : Décrivez simplement ce que vous voulez faire, et Query-Boost génère automatiquement la requête SQL correspondante.
 - **Connexion MySQL Distante** : Pas besoin d'avoir MySQL installé localement. Query-Boost se connecte directement à des bases de données MySQL distantes.
@@ -14,7 +14,7 @@
 
 ---
 
-## ?? Prérequis
+## Prérequis
 
 Avant de commencer, assurez-vous d'avoir installé les éléments suivants :
 
@@ -29,7 +29,7 @@ Avant de commencer, assurez-vous d'avoir installé les éléments suivants :
 
 ---
 
-## ?? Installation
+## Installation
 
 1. **Clonez ce dépôt** :
    ```bash
@@ -50,7 +50,7 @@ Avant de commencer, assurez-vous d'avoir installé les éléments suivants :
 
 ---
 
-## ?? Utilisation
+## Utilisation
 
 1. **Lancez l'application** :
    ```bash
@@ -70,7 +70,7 @@ Avant de commencer, assurez-vous d'avoir installé les éléments suivants :
 
 ---
 
-## ?? Exemple d'Utilisation
+## Exemple d'Utilisation
 
 ### Exemple 1 : Génération Automatique de Requête
 
@@ -86,13 +86,13 @@ SELECT * FROM users LIMIT 10;
 
 ---
 
-## ?? Graphiques
+## Graphiques
 
 Query-Boost vous permet de générer des graphiques à partir des données obtenues par vos requêtes SQL. Cela est particulièrement utile pour visualiser des tendances ou pour analyser des données en profondeur.
 
 ---
 
-## ?? Développement Futur
+## Développement Futur
 
 - **Optimisation des Performances** : Réduire les temps de latence lors de l'exécution des requêtes.
 - **Sécurité Renforcée** : Intégrer des mesures de sécurité supplémentaires pour une utilisation en entreprise.
