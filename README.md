@@ -1,63 +1,99 @@
+
 # Query-Boost
 
-Query-Boost est un outil puissant qui permet de générer et d'exécuter des requêtes SQL à partir de descriptions en langage naturel. En utilisant l'API GPT d'OpenAI, Query-Boost simplifie l'interaction avec les bases de données MySQL, rendant SQL accessible à tous.
+![Query-Boost Logo](https://via.placeholder.com/150)
 
-## Objectif du Projet
+**Query-Boost** est une solution innovante permettant de rendre l'utilisation de SQL plus accessible grâce à l'intelligence artificielle. L'outil génère des requêtes SQL à partir de descriptions en langage naturel et les exécute sur des bases de données MySQL. Il s'adresse aussi bien aux développeurs novices qu'aux professionnels cherchant à automatiser leurs requêtes.
 
-L'objectif principal de Query-Boost est de rendre SQL accessible à tous, même à ceux qui n'ont pas forcément de connaissances approfondies en requêtage.
+## ?? Fonctionnalités
 
-## Fonctionnalités
+- **Génération Automatique de Requêtes SQL** : Décrivez simplement ce que vous voulez faire, et Query-Boost génère automatiquement la requête SQL correspondante.
+- **Connexion MySQL Distante** : Pas besoin d'avoir MySQL installé localement. Query-Boost se connecte directement à des bases de données MySQL distantes.
+- **Visualisation des Données** : Affichage des données avant et après l'exécution des requêtes pour une meilleure transparence.
+- **Graphiques Dynamiques** : Génération de graphiques pour visualiser les données en un clic.
 
-- **Génération Automatique de Requêtes SQL** : Décrivez ce que vous souhaitez faire en langage naturel et Query-Boost se charge du reste.
-- **Connexion Sécurisée à MySQL** : Connectez-vous facilement et en toute sécurité à votre base de données.
-- **Exécution et Validation des Requêtes** : Query-Boost exécute les requêtes générées et vérifie leur succès.
-- **Visualisation des Données Avant et Après** : Affichez les données de la table avant et après l'exécution de la requête pour une meilleure transparence.
+---
 
-## Prérequis
+## ?? Prérequis
 
-- Python 3.x
-- [OpenAI Python Client Library](https://beta.openai.com/docs/libraries)
-- [mysql-connector-python](https://pypi.org/project/mysql-connector-python/)
-- [python-dotenv](https://pypi.org/project/python-dotenv/)
-- [pandas](https://pypi.org/project/pandas/)
-- [tkinter](https://docs.python.org/3/library/tkinter.html)
+Avant de commencer, assurez-vous d'avoir installé les éléments suivants :
 
-## Installation
+- **Python 3.x**
+- Bibliothèques Python :
+  - `openai`
+  - `mysql-connector-python`
+  - `pandas`
+  - `matplotlib`
+  - `tkinter`
+- **Clé API OpenAI**
 
-1. Clonez le dépôt GitHub :
-    ```bash
-    git clone https://github.com/BenjiRenard/Query-Boost.git
-    cd Query-Boost
-    ```
+---
 
-2. Installez les dépendances :
-    ```bash
-    pip install openai mysql-connector-python python-dotenv pandas
-    ```
+## ?? Installation
 
-3. Configurez votre clé API OpenAI dans un fichier `.env` (optionnel mais recommandé) :
-    ```bash
-    echo "OPENAI_API_KEY=your_openai_api_key" > .env
-    ```
+1. **Clonez ce dépôt** :
+   ```bash
+   git clone https://github.com/BenjiRenard/Query-Boost.git
+   ```
 
-## Utilisation
+2. **Installez les dépendances** :
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-1. Exécutez le script Python :
-    ```bash
-    python main.py
-    ```
+3. **Configurez votre clé API OpenAI** :
+   - Créez un fichier `.env` à la racine du projet.
+   - Ajoutez votre clé API OpenAI dans ce fichier :
+     ```
+     OPENAI_API_KEY=votre_cle_api_openai
+     ```
 
-2. Entrez les informations de connexion MySQL via l'interface utilisateur.
+---
 
-3. Décrivez la requête SQL en langage naturel et cliquez sur "Générer et Exécuter".
+## ?? Utilisation
 
-4. Visualisez les données de la table avant et après l'exécution de la requête dans l'interface.
+1. **Lancez l'application** :
+   ```bash
+   python main.py
+   ```
 
-## Exemple
+2. **Connectez-vous à votre base de données MySQL** :
+   - Entrez les informations de connexion dans l'interface (Utilisateur, Mot de passe, Hôte, Base de données).
 
+3. **Générez et exécutez des requêtes SQL** :
+   - Décrivez la requête SQL en langage naturel (ex : *"Sélectionner les 10 premières lignes de la table `users`"*).
+   - Cliquez sur **Générer et Exécuter** pour obtenir la requête SQL correspondante et l'exécuter sur votre base de données.
+
+4. **Visualisation des Données** :
+   - Les résultats avant et après l'exécution de la requête sont affichés dans des tableaux.
+   - Utilisez l'option **Visualiser Graphique** pour générer des graphiques basés sur vos données.
+
+---
+
+## ?? Exemple d'Utilisation
+
+### Exemple 1 : Génération Automatique de Requête
+
+#### Description
 ```plaintext
-Veuillez décrire la requête SQL que vous souhaitez effectuer :
-Récupérez les 10 premières lignes de la table utilisateurs.
+Sélectionne les 10 premières lignes de la table `users`.
+```
 
-Requête SQL générée : SELECT * FROM users LIMIT 10;
-Requête exécutée avec succès.
+#### Requête SQL Générée
+```sql
+SELECT * FROM users LIMIT 10;
+```
+
+---
+
+## ?? Graphiques
+
+Query-Boost vous permet de générer des graphiques à partir des données obtenues par vos requêtes SQL. Cela est particulièrement utile pour visualiser des tendances ou pour analyser des données en profondeur.
+
+---
+
+## ?? Développement Futur
+
+- **Optimisation des Performances** : Réduire les temps de latence lors de l'exécution des requêtes.
+- **Sécurité Renforcée** : Intégrer des mesures de sécurité supplémentaires pour une utilisation en entreprise.
+- **Interface Utilisateur Améliorée** : Créer une interface encore plus intuitive et conviviale.
